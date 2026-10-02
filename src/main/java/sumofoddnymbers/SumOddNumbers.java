@@ -28,13 +28,12 @@ public class SumOddNumbers {
         return pyramid;
     }
 
-    public static void main() {
+    static void main() {
         SumOddNumbers summer = new SumOddNumbers();
 
         List<List<Integer>> pyramid = generatePyramid(6);
 
-        for (int i = 0; i < pyramid.size(); i++) {
-            List<Integer> currentRow = pyramid.get(i);
+        for (List<Integer> currentRow : pyramid) {
             int rowSum = summer.addSum(currentRow);
 
             System.out.println("sum: " + rowSum);
